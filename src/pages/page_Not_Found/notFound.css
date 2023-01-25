@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+.nf-not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "Titillium Web", sans-serif;
+  width:27rem;
+  margin:4rem auto;
+}
+
+.nf-error {
+  font-size: 11.5rem;
+  background-color: transparent;
+  background-position: center;
+  background-size: cover;
+  font-weight: 900;
+}
+
+.nf-btn
+{
+    padding:1rem;
+    margin-top:1rem;
+}
+
+.nf-text
+{
+  width:27rem;
+}

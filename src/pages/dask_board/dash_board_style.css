@@ -1,0 +1,9 @@
+.d-container {
+  gap: 1rem;
+  max-height: 70vh;
+  min-height: 70vh;
+  margin: 7vh auto;
+  width: 65vw;
+  box-shadow: 2px 1px 5px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}

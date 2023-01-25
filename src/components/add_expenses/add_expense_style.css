@@ -1,0 +1,54 @@
+.add-expense-container {
+  gap: 1rem;
+  width: 53vw;
+  margin-top: 4vh;
+}
+
+.ae-form {
+  gap: 2rem;
+  align-items: flex-start;
+  width: 30vw;
+}
+
+.ae-email-container {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  align-items: center;
+}
+
+.ae-email {
+  border: none;
+  outline: none;
+  width: 14vw;
+}
+
+.ae-input {
+  width: 25vw;
+  margin-left: 1rem;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.219);
+  outline: none;
+}
+
+.ae-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 3rem 1rem 0 0;
+}
+
+.ae-btn {
+  padding: 0.6rem 1rem;
+}
+
+.ae-img-container {
+  justify-content: center;
+}
+
+.ae-img {
+  width: 20vw;
+}
+
+.ae-email-sections {
+  overflow-y: scroll;
+  max-height: 2.2rem;
+  min-height: 2.2rem;
+}

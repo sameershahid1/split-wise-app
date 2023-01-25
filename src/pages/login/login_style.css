@@ -1,0 +1,12 @@
+.l-form-position
+{
+    margin: 4rem auto;
+}
+
+.l-background
+{
+    background-image: url("https://assets.splitwise.com/assets/core/facets.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding:1rem 0;
+}
