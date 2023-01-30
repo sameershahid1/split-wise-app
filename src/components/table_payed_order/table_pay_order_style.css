@@ -1,0 +1,74 @@
+.table-pay-order-container {
+  position: absolute;
+  top:6rem;
+  left: 20rem;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.207);
+  background-color: white;
+}
+
+.container-overflow-scroll {
+  min-height: 47vh;
+  max-height: 47vh;
+  overflow-y: scroll;
+}
+
+.table-container,
+.t-row,
+.t-cell {
+  border-collapse: collapse;
+}
+
+.t-header-container
+{
+  padding: 0.6rem 0;
+  column-span: 4;
+  background-color: #1cc29c;
+  color: white;
+  text-align: center;
+  align-items: center;
+  gap:0.3rem;
+}
+
+.t-header {
+  font-size: 2rem;
+}
+
+.t-header-price
+{
+  font-size:1.3rem;
+  border-top:1px solid rgba(0, 0, 0, 0.162);
+  width:25vw;
+  padding-top:0.3rem;
+}
+
+.t-cell {
+  padding:10px 2rem;
+  text-align: center;
+}
+
+.t-cell-right {
+  border-right: 1px solid rgba(0, 0, 0, 0.211);
+}
+
+.t-cell-down {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.211);
+}
+
+.t-btn-container {
+  justify-content: space-around;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem 0 10px 0;
+}
+
+.t-btn {
+  font-size: 14px;
+  padding: 9px 1.5rem;
+}
+
+.t-input
+{
+  border:none;
+  outline: none;
+  border-bottom:1px solid rgba(13, 12, 12, 0.305); 
+  text-align: center;
+}
