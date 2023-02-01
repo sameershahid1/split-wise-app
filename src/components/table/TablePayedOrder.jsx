@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ExportToExcel from "../../helping_files/excel.js";
 import "./table_pay_order_style.css";
+import { dataBase } from "../../firebase-config.js";
+import { ref, set, onValue } from "firebase/database";
 
-const headerTagOrder = ["Email", "Payed", "Order"];
-const headerTagReport = ["Email", "Payed", "Order", "Pending"];
+const headerTagOrder = ["Email", "Paid", "Order"];
+const headerTagReport = ["Email", "Paid", "Order", "Pending"];
 
 //This is funtion handler header tags.
 const headerTagHandler = (element, index) => {
@@ -14,6 +16,7 @@ const headerTagHandler = (element, index) => {
   );
 };
 
+//This function will Report cells.
 const dataReportHandler = (element) => {
   return (
     <tr className="t-row" key={element.id}>
@@ -31,12 +34,48 @@ const TablePayedOrder = ({
   setDataSets,
   totalPrice,
   setValid,
+  descriptiveInfo,
 }) => {
   const [isGenerator, setIsGenerator] = useState(false);
+  const [allReports, setAllReports] = useState([]);
+  useEffect(() => {
+    const starCountRef = ref(dataBase, "/all-reports");
+    onValue(starCountRef, (snapShot) => {
+      const data = snapShot.val();
+      console.log(data);
+      setAllReports(data);
+    });
+  }, []);
 
   //Cancel Button Handler.
   const cancelHandler = () => {
     setTableData((prev) => !prev);
+  };
+
+  //Send the data to the Firebase
+  const sendingToFireBase = async (data) => {
+    try {
+      const refsData = ref(dataBase, "/all-reports");
+      if (allReports == null) {
+        set(refsData, [data]);
+      } else {
+        set(refsData, [...allReports, data]);
+      }
+
+      setValid({
+        isValid: false,
+        message: "The Expense is created Successfully",
+        type: "Message",
+      });
+      setIsGenerator(true);
+    } catch (error) {
+      setValid({
+        isValid: false,
+        message:
+          "Due to some network issue, we were not able to create expence",
+        type: "Error",
+      });
+    }
   };
 
   //Report Generator Handler
@@ -48,7 +87,10 @@ const TablePayedOrder = ({
     });
 
     if (totalOrder === parseInt(totalPrice)) {
-      setIsGenerator(true);
+      sendingToFireBase({
+        descriptiveInfo: descriptiveInfo,
+        recordData: dataSets,
+      });
     } else {
       setValid({
         isValid: false,

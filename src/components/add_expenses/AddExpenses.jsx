@@ -4,7 +4,7 @@ import { ref, onValue } from "firebase/database";
 import { dataBase } from "../../firebase-config";
 import Message from "../message/Message";
 import "./add_expense_style.css";
-import TablePayedOrder from "../table_payed_order/TablePayedOrder";
+import TablePayedOrder from "../table/TablePayedOrder";
 
 //Finding Emails.
 const findingEmailHandler = (element, email) => {
@@ -41,7 +41,7 @@ const AddExpenses = () => {
 
   //UseEffect
   useEffect(() => {
-    const emailFethcer =() => {
+    const emailFethcer = () => {
       const work = ref(dataBase, "/");
       onValue(work, (snap) => {
         setAllEmail([...snap.val().email]);
@@ -152,6 +152,11 @@ const AddExpenses = () => {
           setTableData={setTableData}
           totalPrice={priceRef.current.value}
           setValid={setValid}
+          descriptiveInfo={{
+            description: descriptionRef.current.value,
+            totalPrice: priceRef.current.value,
+            date: dateRef.current.value,
+          }}
         />
       ) : null}
       {!valid.isValid ? <Message valid={valid} setValid={setValid} /> : null}
@@ -164,7 +169,9 @@ const AddExpenses = () => {
                 {/*In this place, will place render those people that i have entered*/}
                 {dataSets.length !== 0
                   ? dataSets.map((element) => (
-                      <p className="ae-enterd-email" key={element.id}>{element.email}</p>
+                      <p className="ae-enterd-email" key={element.id}>
+                        {element.email}
+                      </p>
                     ))
                   : null}
                 <input
@@ -190,7 +197,7 @@ const AddExpenses = () => {
               type="number"
               placeholder="$0.00"
               name="price"
-               id="price"
+              id="price"
               ref={priceRef}
             />
             <input

@@ -10,3 +10,16 @@
     background-repeat: no-repeat;
     padding:1rem 0;
 }
+
+.reset-container
+{
+    position: absolute;
+    top:7rem;
+    left:27vw;
+}
+
+.reset-header
+{
+    background-color: white;
+    padding:2px;
+}

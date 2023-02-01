@@ -5,12 +5,16 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import loadingImg from "../../Assets/loading.png";
 import Message from "../message/Message";
+import ResetFrom from "../reset_password/ResetFrom";
 
 const LoginForm = ({ classname }) => {
+  //useRefs
   const emailRef = useRef();
   const passwordRef = useRef();
   const navigate = useNavigate();
+  //useStates
   const [load, setLoad] = useState(false);
+  const [isReset, setIsReset] = useState(false);
   const [valid, setValid] = useState({
     isValid: true,
     message: "",
@@ -34,7 +38,7 @@ const LoginForm = ({ classname }) => {
         console.log(error);
         setLoad(false);
         setValid({
-          isValid:false,
+          isValid: false,
           message: "Invalid email or password",
           type: "Error",
         });
@@ -43,9 +47,14 @@ const LoginForm = ({ classname }) => {
     setLoad(true);
   };
 
+  const resetHandler = () => {
+    setIsReset(true);
+  };
+
   return (
     <>
-      {!valid.isValid ? <div className="background"></div> : null}
+      {!valid.isValid || isReset ? <div className="background"></div> : null}
+      {isReset ? <ResetFrom setIsReset={setIsReset} setValid={setValid} /> : null}
       {!valid.isValid ? <Message valid={valid} setValid={setValid} /> : null}
       <form className={`login-form flex-column ${classname}`}>
         <h1 className="l-title">Log in</h1>
@@ -77,7 +86,9 @@ const LoginForm = ({ classname }) => {
           <button onClick={submitHandeler} className="l-btn" type="button">
             Log in
           </button>
-          <button className="l-btn l-">Reset Password</button>
+          <button onClick={resetHandler} className="l-btn l-" type="button">
+            Reset Password
+          </button>
         </div>
         {load && <img className="loading" src={loadingImg} alt="Loading" />}
       </form>
