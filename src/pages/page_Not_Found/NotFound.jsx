@@ -1,10 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 //importing the css files
 import "./notFound.css";
 
 const NotFound = () => {
+const navigate=useNavigate();
+const goingFromNotFoundToLoginOrDashBoard=()=>{
+  const isLoged=window.sessionStorage.getItem('isLoged');
+  if(isLoged==="YES")
+  {
+    navigate("/dash-board/all-expense");
+  }
+  else 
+  {
+    navigate("/");      
+  }
+}
+
   return (
     <div className="nf-not-found-container">
       <h1 className="nf-error">404</h1>
@@ -13,8 +27,8 @@ const NotFound = () => {
         sorry but the page you are looking for does not exist, have been removed
         name changed or temporarily unavailable.
       </p>
-      <button className="l-btn nf-btn">
-        <Link className="link" to={"/"}>go to homepage</Link>
+      <button onClick={goingFromNotFoundToLoginOrDashBoard} className="l-btn nf-btn">
+        go to homepage
       </button>
     </div>
   );
