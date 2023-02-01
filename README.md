@@ -51,4 +51,4 @@ Start the server
 
 ## Project-Link
 
-https://split-wise-app-gilt.vercel.app/
+https://split-wise-app-three.vercel.app/
