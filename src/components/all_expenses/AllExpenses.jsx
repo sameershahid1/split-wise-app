@@ -3,15 +3,28 @@ import { dataBase } from "../../firebase-config.js";
 import { ref, onValue, set } from "firebase/database";
 import "./all_expence_style.css";
 import Message from "./../message/Message";
+import { useNavigate } from "react-router";
 
 const AllExpenses = () => {
   const [allReports, setAllReports] = useState([]);
+  const navigate=useNavigate();
   const [valid, setValid] = useState({
     isValid: true,
     message: "",
     type: "",
   });
-
+  useEffect(()=>
+  {
+    const isLoged=window.sessionStorage.getItem('isLoged');
+    if(isLoged==="YES")
+    {
+      navigate("/dash-board/all-expense");
+    }
+    else 
+    {
+      navigate("/");      
+    }
+  },[]);
   useEffect(() => {
     const starCountRef = ref(dataBase, "/all-reports");
     onValue(starCountRef, (snapShot) => {

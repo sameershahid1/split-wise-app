@@ -5,6 +5,7 @@ import { dataBase } from "../../firebase-config";
 import Message from "../message/Message";
 import "./add_expense_style.css";
 import TablePayedOrder from "../table/TablePayedOrder";
+import { useNavigate } from "react-router";
 
 //Finding Emails.
 const findingEmailHandler = (element, email) => {
@@ -21,6 +22,7 @@ const AddExpenses = () => {
   });
   const [allEmail, setAllEmail] = useState([]);
   const [dataSets, setDataSets] = useState([]);
+  const navigate=useNavigate();
   const [valid, setValid] = useState({
     isValid: true,
     message: "",
@@ -40,6 +42,19 @@ const AddExpenses = () => {
   };
 
   //UseEffect
+  useEffect(()=>
+  {
+    const isLoged=window.sessionStorage.getItem('isLoged');
+    if(isLoged==="YES")
+    {
+      navigate("/dash-board/add-expense");
+    }
+    else 
+    {
+      navigate("/");      
+    }
+  },[]);
+
   useEffect(() => {
     const emailFethcer = () => {
       const work = ref(dataBase, "/");

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState,useEffect } from "react";
 import "./login_form_style.css";
 import { auth } from "../../firebase-config";
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -21,6 +21,15 @@ const LoginForm = ({ classname }) => {
     type: "",
   });
 
+useEffect(()=>
+{
+  const isLoged=window.sessionStorage.getItem('isLoged');
+  if(isLoged==="YES")
+  {
+    navigate("/dash-board");
+  }
+},[]);
+
   //Submit functions
   const submitHandeler = () => {
     signInWithEmailAndPassword(
@@ -31,6 +40,7 @@ const LoginForm = ({ classname }) => {
       .then((current) => {
         setTimeout(() => {
           setLoad(false);
+          window.sessionStorage.setItem("isLoged","YES");
           navigate("/dash-board");
         }, 2000);
       })

@@ -7,6 +7,7 @@ import "./header_style.css";
 
 const HeaderDashBoard = () => {
   const navigate = useNavigate();
+  
   return (
     <div className="header-container header-background">
       <Logo />
@@ -14,6 +15,7 @@ const HeaderDashBoard = () => {
         onClick={() => {
           signOut(auth)
             .then((res) => {
+              window.sessionStorage.setItem("isLoged","NO");
               navigate("/");
             })
             .catch((error) => {

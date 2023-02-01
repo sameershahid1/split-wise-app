@@ -5,7 +5,11 @@ import { useNavigate } from "react-router-dom";
 const DashBoardMain = () => {
 const navigate=useNavigate();
 useEffect(()=>{
-  navigate("/dash-board/add-expense");
+  const isLoged=window.sessionStorage.getItem("isLoged");
+  if(isLoged==="YES")
+  {
+    navigate("/dash-board/add-expense");
+  }
 },[]);
   return (
     <>
