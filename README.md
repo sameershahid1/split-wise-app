@@ -1,70 +1,57 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Split-Wise Application
 
-## Available Scripts
+It creates expense of any thing, that we want.
+We can add other people in this expense to.
+In order to use this, appliaction you have to Log-in first than, go to add-expense, fill the form and add other people paid and order and at the last you can see the report and can also download it to.
+If you want to, see all of your expense that you have created you can go to all-expense, and can also delete any expense that you have created.
 
-In the project directory, you can run:
+## Project-Link
 
-### `npm start`
+https://split-wise-app-three.vercel.app/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## React-Version
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  18.2.0
 
-### `npm test`
+## Screenshots
+### Log-in Page
+![Screenshot from 2023-02-01 12-49-43](https://user-images.githubusercontent.com/119922388/215986324-94c039e4-2d6d-4516-81cb-df7956f60682.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Dash-Board
+![Screenshot from 2023-02-01 13-33-09](https://user-images.githubusercontent.com/119922388/215991387-49d6b582-11b5-49b7-910e-5873169d46a6.png)
 
-### `npm run build`
+### Adding paid and order
+![Screenshot from 2023-02-01 13-35-04](https://user-images.githubusercontent.com/119922388/215991702-befbd801-6d97-4b2b-98fd-c31c4ce7f8f7.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### All-Expense
+![Screenshot from 2023-02-01 13-36-13](https://user-images.githubusercontent.com/119922388/215991961-55197dc1-2dae-4a41-b1d2-52709cda9291.png)
+## Run Locally
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Clone the project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+  git clone https://github.com/SameerDev12/split-wise-app.git
+```
 
-### `npm run eject`
+Go to the project directory
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+  cd split-wise-app
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Install dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+  npm install env-cmd
+  npm install file-saver
+  npm install xlsx
+  npm install firebase
+  npm install react-router-dom
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Start the server
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+  npm start
+```

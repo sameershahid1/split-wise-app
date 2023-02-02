@@ -1,0 +1,38 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 3rem;
+  box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+.h-btn {
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  background-color: #1cc29f;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.583);
+}
+
+.h-btn:hover {
+  background-color: #27b495;
+}
+
+/*Header for Dash-board*/
+.header-background {
+  background-color: #1cc29f;
+}
+
+.d-btn {
+  background-color: #ff6527;
+  text-shadow: 1px 1px 1px black;
+}
+
+.d-btn:hover {
+  background-color: #e15219;
+  color: white !important;
+}

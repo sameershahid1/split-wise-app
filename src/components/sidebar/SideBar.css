@@ -1,0 +1,24 @@
+.side-bar-container {
+  background-color: #1cc29f;
+  border-radius: 7px;
+  width: 9vw;
+}
+
+.s-list,
+.s-link {
+  padding: 1.5rem 0.3rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  list-style-type: none;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+.s-list:hover {
+  background-color: #2fad8ecc;
+  cursor: pointer;
+}
+.s-link {
+  text-decoration: none;
+}

@@ -1,0 +1,75 @@
+.add-expense-container {
+  gap: 1rem;
+  width: 53vw;
+  margin-top: 4vh;
+}
+
+.ae-form {
+  gap: 1.5rem;
+  align-items: flex-start;
+  width: 30vw;
+}
+
+.ae-email-container {
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.ae-label {
+  width: 6rem;
+}
+
+.ae-email {
+  border: none;
+  outline: none;
+  padding: 13px 1rem;
+  width: 15.5vw !important;
+}
+
+.ae-input {
+  width: 25vw;
+  margin-left: 1rem;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.219);
+  outline: none;
+}
+
+.ae-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 6px 1rem 0 0;
+}
+
+.ae-btn {
+  padding: 0.6rem 1rem !important;
+}
+
+.ae-img-container {
+  justify-content: center;
+}
+
+.ae-img {
+  width: 20vw;
+  min-height: 27vh;
+  max-height: 27vh;
+}
+
+.background {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.245);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.selected-container {
+  align-items: center;
+  gap: 1rem;
+}
+
+.selected {
+  width: 15vw;
+  padding: 8px 0 8px 6px;
+  border: 1px solid rgba(0, 0, 0, 0.247);
+}
