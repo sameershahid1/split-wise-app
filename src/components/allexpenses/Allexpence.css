@@ -39,3 +39,8 @@
   padding: 1rem 1rem;
   font-size: 2.5rem;
 }
+
+.all-btn
+{
+  padding:10px 1rem !important;
+}

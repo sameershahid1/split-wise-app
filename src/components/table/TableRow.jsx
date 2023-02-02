@@ -34,12 +34,24 @@ const TableRow = ({ element, dataSets, setDataSets }) => {
 
   return (
     <tr className='t-row' key={element.id}>
-      <td className='zt-cell t-cell-down t-cell-right'>{element.email}</td>
+      <td className='t-cell t-cell-down t-cell-right'>{element.email}</td>
       <td className='t-cell t-cell-down t-cell-right'>
-        <input className='t-input' onChange={paidHanlder} name='paid' type='number' />
+        <input
+          className='t-input'
+          onChange={paidHanlder}
+          placeholder={'0'}
+          name='paid'
+          type='number'
+        />
       </td>
       <td className='t-cell t-cell-down t-cell-right'>
-        <input className='t-input' name='order' onChange={orderHanlder} type='number' />
+        <input
+          className='t-input'
+          name='order'
+          placeholder={'0'}
+          onChange={orderHanlder}
+          type='number'
+        />
       </td>
     </tr>
   )

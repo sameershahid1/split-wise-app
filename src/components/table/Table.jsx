@@ -38,7 +38,7 @@ const Table = ({ setIsTable, dataSets, setDataSets, totalPrice, setValid, descri
       if (allReports == null) {
         set(refsData, [data])
       } else {
-        set(refsData, [...allReports, data])
+        set(refsData, [data, ...allReports])
       }
 
       setValid({
@@ -91,7 +91,7 @@ const Table = ({ setIsTable, dataSets, setDataSets, totalPrice, setValid, descri
   }
 
   return (
-    <div className='table-pay-order-container'>
+    <div className={`table-pay-order-container ${isReport&&'t-report-position'}`}>
       <div className='t-header-container flex-column'>
         <h1 className='t-header'>Table Pay & Order</h1>
         <p className='t-header-price'>Total-Price: {totalPrice}</p>

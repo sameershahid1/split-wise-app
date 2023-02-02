@@ -25,6 +25,7 @@
   padding: 10px 0 10px 10px;
   outline-color: rgba(2, 115, 51, 0.692);
   border-radius: 1px;
+  border: 1px solid rgba(0, 0, 0, 0.353);
 }
 
 .l-btn-container {
@@ -34,11 +35,11 @@
 }
 
 .l-btn {
-  border: none;
   border-radius: 5px;
   background-color: #18a582;
-  padding: 10px 0;
   color: white;
+  border: none;
+  padding: 15px 0;
   font-size: 1.2rem;
   font-weight: 600;
   cursor: pointer;

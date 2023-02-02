@@ -84,7 +84,7 @@ const AllExpenses = () => {
                 </span>
               </div>
               <button
-                className='l-btn all-'
+                className='l-btn all-btn'
                 onClick={() => {
                   deleteExpenceHandler(element.id)
                 }}
