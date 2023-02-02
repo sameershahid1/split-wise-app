@@ -6,6 +6,14 @@ We can add other people in this expense to.
 In order to use this, appliaction you have to Log-in first than, go to add-expense, fill the form and add other people paid and order and at the last you can see the report and can also download it to.
 If you want to, see all of your expense that you have created you can go to all-expense, and can also delete any expense that you have created.
 
+## Project-Link
+
+https://split-wise-app-three.vercel.app/
+
+## React-Version
+
+  18.2.0
+
 ## Screenshots
 ### Log-in Page
 ![Screenshot from 2023-02-01 12-49-43](https://user-images.githubusercontent.com/119922388/215986324-94c039e4-2d6d-4516-81cb-df7956f60682.png)
@@ -47,8 +55,3 @@ Start the server
 ```bash
   npm start
 ```
-
-
-## Project-Link
-
-https://split-wise-app-three.vercel.app/
