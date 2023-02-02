@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 .nf-not-found-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-family: "Titillium Web", sans-serif;
-  width:27rem;
-  margin:4rem auto;
+  font-family: 'Titillium Web', sans-serif;
+  width: 27rem;
+  margin: 4rem auto;
 }
 
 .nf-error {
@@ -16,13 +16,11 @@
   font-weight: 900;
 }
 
-.nf-btn
-{
-    padding:1rem;
-    margin-top:1rem;
+.nf-btn {
+  padding: 1rem;
+  margin-top: 1rem;
 }
 
-.nf-text
-{
-  width:27rem;
+.nf-text {
+  width: 27rem;
 }

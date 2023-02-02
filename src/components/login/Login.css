@@ -25,7 +25,6 @@
   padding: 10px 0 10px 10px;
   outline-color: rgba(2, 115, 51, 0.692);
   border-radius: 1px;
-  border: 1px solid rgba(0, 0, 0, 0.353);
 }
 
 .l-btn-container {
@@ -101,4 +100,26 @@
   position: absolute;
   left: 45vw;
   top: 45vh;
+}
+
+.l-form-position {
+  margin: 4rem auto;
+}
+
+.l-background {
+  background-image: url('https://assets.splitwise.com/assets/core/facets.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 1rem 0;
+}
+
+.reset-container {
+  position: absolute;
+  top: 7rem;
+  left: 27vw;
+}
+
+.reset-header {
+  background-color: white;
+  padding: 2px;
 }
