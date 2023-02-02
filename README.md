@@ -8,7 +8,7 @@ If you want to, see all of your expense that you have created you can go to all-
 
 ## Project-Link
 
-https://split-wise-app-three.vercel.app/
+https://split-wise-app-chi.vercel.app/dash-board/all-expense
 
 ## React-Version
 
