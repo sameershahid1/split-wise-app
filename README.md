@@ -26,28 +26,13 @@ https://split-wise-app-three.vercel.app/
 
 ### All-Expense
 ![Screenshot from 2023-02-01 13-36-13](https://user-images.githubusercontent.com/119922388/215991961-55197dc1-2dae-4a41-b1d2-52709cda9291.png)
+
 ## Run Locally
 
 Clone the project
 
 ```bash
   git clone https://github.com/SameerDev12/split-wise-app.git
-```
-
-Go to the project directory
-
-```bash
-  cd split-wise-app
-```
-
-Install dependencies
-
-```bash
-  npm install env-cmd
-  npm install file-saver
-  npm install xlsx
-  npm install firebase
-  npm install react-router-dom
 ```
 
 Start the server

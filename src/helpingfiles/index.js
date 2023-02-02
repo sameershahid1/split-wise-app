@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 import * as FileSaver from 'file-saver'
 import * as XLSX from 'xlsx'
 
+
 const ExportToExcel = ({ dataSet, className }) => {
   const fileType = 'xlsx'
 

@@ -5,13 +5,14 @@ import PropTypes from 'prop-types'
 import { ref, onValue } from 'firebase/database'
 
 
-import Message from '../message/Message'
-import SelectedEmail from './SelectedEmail'
-import Table from '../table/Table'
-import ImageContainer from './ImageContainer'
-import Email from './Email'
+import Email from '../email'
+import ImageContainer from '../imagecontainer'
+import Message from '../message'
+import SelectedEmail from '../selectedemail'
+import Table from '../table'
 
 import './Addexpense.css'
+
 
 const findingEmailHandler = (element, email) => {
   if (element === email) {
@@ -34,6 +35,7 @@ const AddExpenses = ({ setHeaderBtn }) => {
     message: '',
     type: ''
   })
+
   const [isTable, setIsTable] = useState(false)
 
   const descriptionRef = useRef(null)
@@ -104,13 +106,16 @@ const AddExpenses = ({ setHeaderBtn }) => {
     } else {
       setIsTable(true)
     }
+    
   }
 
   const emailHandler = e => {
     if (e.key === 'Enter') {
+
       const emailRegex = /[\w]*@[a-z]*[.]com/g
       const emailString = e.target.value
       let checker = true
+
       if (emailRegex.test(emailString)) {
         const findedEmail = allEmail.find(element => findingEmailHandler(element, emailString))
 
@@ -151,7 +156,7 @@ const AddExpenses = ({ setHeaderBtn }) => {
       }
     }
   }
-
+  
   return (
     <>
       {(!valid.isValid || isTable) && <div className='background'></div>}

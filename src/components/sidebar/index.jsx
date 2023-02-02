@@ -2,7 +2,9 @@ import { Link } from 'react-router-dom'
 
 import './SideBar.css'
 
+
 const SideBar = () => {
+
   return (
     <ul className='side-bar-container flex-column'>
       <li className='s-list'>

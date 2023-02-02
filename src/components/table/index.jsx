@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import { ref, set, onValue } from 'firebase/database'
 import { useState, useEffect } from 'react'
 
-import ExportToExcel from '../../helpingfiles/excel.js'
-import TableRow from './TableRow'
-import CellReport from './CellReport'
-import HeaderTag from './HeaderTag'
+import ExportToExcel from '../../helpingfiles'
+import TableRow from '../tablerow'
+import CellReport from '../cellreport'
+import HeaderTag from '../headertag'
 
 import './Table.css'
 
@@ -15,7 +15,9 @@ const headerTagOrder = [
   { id: 2, email: 'Paid' },
   { id: 3, email: 'Order' }
 ]
+
 const headerTagReport = [...headerTagOrder, { id: 4, email: 'Pending' }]
+
 
 const Table = ({ setIsTable, dataSets, setDataSets, totalPrice, setValid, descriptiveInfo }) => {
   const [isReport, setIsReport] = useState(false)

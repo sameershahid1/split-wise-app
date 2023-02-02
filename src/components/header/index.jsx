@@ -4,9 +4,10 @@ import { signOut } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-import Logo from './../logo/Logo'
+import Logo from '../logo'
 
 import './Header.css'
+
 
 const Header = ( { headerBtn, setHeaderBtn } ) => {
   const navigate = useNavigate()

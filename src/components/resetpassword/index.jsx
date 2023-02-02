@@ -4,7 +4,9 @@ import { sendPasswordResetEmail } from 'firebase/auth'
 import PropTypes from 'prop-types'
 import { useRef } from 'react'
 
+
 const ResetFrom = ({ setIsReset, setValid }) => {
+
   const emailRef = useRef(null)
 
   const cancelHandler = () => {
@@ -53,6 +55,7 @@ const ResetFrom = ({ setIsReset, setValid }) => {
 }
 
 export default ResetFrom
+
 
 ResetFrom.propTypes = {
   setIsReset: PropTypes.func.isRequired,

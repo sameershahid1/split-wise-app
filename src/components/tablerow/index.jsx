@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types'
 
+
 const TableRow = ({ element, dataSets, setDataSets }) => {
+
   const handelingPaidOrderField = (id, value, type) => {
+
     const data = dataSets.filter(element => {
       if (element.id !== id) {
         return element

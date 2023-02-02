@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types'
 
+
 const CellReport = ({ element }) => {
+
   return (
     <tr className='t-row' key={element.id}>
       <td className='t-cell t-cell-down t-cell-right'>{element.email}</td>

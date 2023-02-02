@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types'
 
+
 const SelectedEmail = ({ dataSets }) => {
+
   return (
     <div className='selected-container flex'>
       <span>Selected Email: </span>

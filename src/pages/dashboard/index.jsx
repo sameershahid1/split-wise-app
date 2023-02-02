@@ -2,9 +2,10 @@ import { useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
-import SideBar from '../../components/sidebar/SideBar'
+import SideBar from '../../components/sidebar'
 
 import './DashBoard.css'
+
 
 const DaskBoard = () => {
   const navigate = useNavigate()

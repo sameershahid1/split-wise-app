@@ -3,14 +3,16 @@ import { useRef, useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 
-import Message from '../message/Message'
-import ResetFrom from '../resetpassword/ResetFrom'
+import Message from '../message'
+import ResetFrom from '../resetpassword'
 
 import loadingImg from '../../assets/loading.png'
 
 import './Login.css'
 
+
 const LoginForm = () => {
+
   const emailRef = useRef()
   const passwordRef = useRef()
   const navigate = useNavigate()

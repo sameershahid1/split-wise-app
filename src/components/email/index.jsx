@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types'
 
+
 const Email = ({ emailHandler }) => {
+
   return (
     <div className='ae-email-container flex'>
       <label className='ae-label' htmlFor='email'>With you and: </label>

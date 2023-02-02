@@ -2,7 +2,9 @@ import PropTypes from 'prop-types'
 
 import noImageSelected from '../../assets/no-image.png'
 
+
 const ImageContainer = ({ imgSelected }) => {
+
   return (
     <div className='ae-img-container flex-column'>
       {imgSelected.isSelected ? (

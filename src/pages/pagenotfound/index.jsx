@@ -2,8 +2,11 @@ import { useNavigate } from 'react-router-dom'
 
 import './NotFound.css'
 
+
 const NotFound = () => {
+
   const navigate = useNavigate()
+
   const goingFromNotFoundToLoginOrDashBoard = () => {
     const isLoged = window.sessionStorage.getItem('isLoged')
     if (isLoged === 'y') {

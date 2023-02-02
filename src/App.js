@@ -1,20 +1,23 @@
 import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
-import AddExpenses from './components/addexpenses/AddExpenses.jsx'
-import AllExpenses from './components/allexpenses/AllExpenses.jsx'
-import DaskBoard from './pages/dashboard/DaskBoard.jsx'
-import Header from './components/header/Header'
-import Login from './components/login/Login.jsx'
-import NotFound from './pages/pagenotfound/NotFound.jsx'
+import AddExpenses from './components/addexpenses'
+import AllExpenses from './components/allexpenses'
+import DaskBoard from './pages/dashboard'
+import Header from './components/header'
+import Login from './components/login'
+import NotFound from './pages/pagenotfound'
 
 import './app.css'
 
+
 const App = () => {
+
   const [headerBtn, setHeaderBtn] = useState({
     isLogIn: false,
     btnName: 'Log-in'
   })
+  
   return (
     <div>
       <Header headerBtn={headerBtn} setHeaderBtn={setHeaderBtn} />

@@ -4,7 +4,9 @@ import closeImg from '../../assets/close.png'
 
 import './Message.css'
 
+
 const Message = ({ valid, setValid }) => {
+
   const { message, type } = valid
 
   const closeHandler = () => {

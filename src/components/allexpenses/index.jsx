@@ -3,25 +3,28 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router'
 import { ref, set, onValue } from 'firebase/database'
 
-import Message from '../message/Message'
+import Message from '../message'
 
 import './Allexpence.css'
 
+
 const AllExpenses = () => {
+
   const [allReports, setAllReports] = useState([])
   const navigate = useNavigate()
+
   const [valid, setValid] = useState({
     isValid: true,
     message: '',
     type: ''
   })
+
   useEffect(() => {
+
     const isLoged = window.sessionStorage.getItem('isLoged')
-    if (isLoged === 'y') {
-      navigate('/dash-board/all-expense')
-    } else {
-      navigate('/')
-    }
+    
+    navigate(isLoged === 'y' ? '/dash-board/all-expense' : '/')
+
   }, [])
 
   useEffect(() => {
@@ -45,15 +48,18 @@ const AllExpenses = () => {
     })
 
     try {
+
       const refsData = ref(dataBase, '/all-reports')
       set(refsData, [...filterdExpence])
       setAllReports([...filterdExpence])
+
       setValid({
         isValid: false,
         message: 'The Expense is successfully Deleted',
         type: 'Message'
       })
-    } catch (error) {
+    } 
+    catch (error) {
       setValid({
         isValid: false,
         message: 'Due to some network issue, we were not able to delete expence',
